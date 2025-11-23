@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>JAprototypes – prototypy, druk 3D i CNC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --accent: #ff7a00;
+      --text: #111111;
+      --muted: #555555;
+      --border: #dddddd;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      padding: 24px 0 40px;
+      text-align: left;
+    }
+
+    /* LOGO */
+    .logo-img {
+      height: 150px;
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .hero-sub {
+      max-width: 520px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: 2px solid var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      margin-left: 8px;
+    }
+    .btn-outline:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    section p.lead {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    ul li { margin-bottom: 6px; }
+
+    /* FORM */
+    form {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 16px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #cccccc;
+      background: #f9f9f9;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    small {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 24px;
+      padding-top: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+<header>
+  <div style="
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  ">
+    <!-- LOGO -->
+    <img src="logo.png" alt="JAprototypes" class="logo-img">
+
+    <!-- Tekst obok logo -->
+    <h1 style="margin: 0; font-size: 1.8rem; font-weight: 700; color: #111;">
+      Prototypy, które możesz wziąć do ręki.
+    </h1>
+  </div>
+
+  <p class="hero-sub" style="margin-top: 16px;">
+    Druk 3D + frezowanie CNC + małe serie. Od pliku do gotowej części – szybko i profesjonalnie.
+  </p>
+
+  <a href="#kontakt" class="btn">Wyślij zapytanie</a>
+  <a href="#co-robimy" class="btn btn-outline">Zobacz ofertę</a>
+</header>
+
+    <section id="co-robimy">
+      <h2>Co możemy dla Ciebie wykonać</h2>
+      <p class="lead">
+        Specjalizuję się w małogabarytowych częściach metalowych i plastikowych.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Prototypy funkcjonalne</h3>
+          <p>Elementy do testów, dopasowania i rozwoju konstrukcji.</p>
+        </div>
+        <div class="card">
+          <h3>Małe serie produkcyjne</h3>
+          <p>Serie od kilku do kilkudziesięciu sztuk.</p>
+        </div>
+        <div class="card">
+          <h3>Części do R&D</h3>
+          <p>Elementy precyzyjne do projektów badawczo-rozwojowych.</p>
+        </div>
+        <div class="card">
+          <h3>Detale customowe</h3>
+          <p>Jednostkowe części do projektów DIY i specjalnych.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologie">
+      <h2>Technologie</h2>
+      <p class="lead">Dobór technologii pod wymagania projektu.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Frezowanie CNC</h3>
+          <p>Aluminium i metale miękkie – wysoka dokładność.</p>
+        </div>
+        <div class="card">
+          <h3>Druk 3D (FDM)</h3>
+          <p>Szybkie prototypowanie, obudowy i elementy testowe.</p>
+        </div>
+        <div class="card">
+          <h3>Małe elementy</h3>
+          <p>Specjalizacja w małych detalach, gdzie liczy się precyzja.</p>
+        </div>
+        <div class="card">
+          <h3>Wkrótce</h3>
+          <p>Anodowanie aluminium, technologie wysokiej precyzji.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <h2>Opowiedz o swoim projekcie</h2>
+      <p class="lead">Odpowiem w ciągu 24h.</p>
+
+      <form>
+        <label for="name">Imię / firma</label>
+        <input id="name" name="name" placeholder="Jan, firma XYZ">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="twojemail@domena.pl">
+
+        <label for="message">Opis projektu</label>
+        <textarea id="message" name="message" placeholder="Wymiary, materiał, ilość, cel projektu..."></textarea>
+
+        <label for="link">Link do plików (opcjonalnie)</label>
+        <input id="link" name="link" placeholder="Google Drive / WeTransfer">
+
+        <small>Wysyłając formularz, zgadzasz się na kontakt w sprawie zapytania.</small>
+        <br><br>
+
+        <button type="submit" class="btn">Wyślij</button>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> jaPrototypes
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
